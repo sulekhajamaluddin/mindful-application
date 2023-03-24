@@ -1,5 +1,6 @@
 //Node Modules
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 //Project Files
 import { readDocuments } from "../../scripts/firestore/readDocuments";
 import { useUser } from "../../state/UserProvider";
@@ -9,6 +10,7 @@ import CourseCard from "../../components/student/CourseCard";
 import EmptyList from "../../components/common/EmptyList";
 
 export default function Home() {
+  const navigate = useNavigate();
   const { courses, coursesDispatch } = useUser();
   const [status, setStatus] = useState(0);
   const COLLECTION_NAME = "courses";
@@ -44,6 +46,9 @@ export default function Home() {
       <h1>All available courses</h1>
       <div className="course-list">
         {courses.length === 0 ? <EmptyList /> : courseList}
+        <button className="back" onClick={() => navigate(-1)}>
+          Go back
+        </button>
       </div>
     </div>
   );

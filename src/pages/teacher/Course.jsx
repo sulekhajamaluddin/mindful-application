@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { readDocuments } from "../../scripts/firestore/readDocuments";
 import Loader from "../../components/common/Loader";
 import Error from "../common/Error";
@@ -11,6 +11,7 @@ import EmptyList from "../../components/common/EmptyList";
 export default function Course() {
   const [status, setStatus] = useState(0);
   const { id } = useParams();
+  const navigate = useNavigate();
   const { contents, contentsDispatch, students, studentsDispatch } = useUser();
   const [state, setState] = useState("contents");
   const COLLECTION_NAME = `courses/${id}/contents`;
@@ -64,6 +65,9 @@ export default function Course() {
       </div>
       {state === "contents" && <Contents contents={contents} id={id} />}
       {state === "students" && studentsList}
+      <button className="back" onClick={() => navigate(-1)}>
+        Go Back
+      </button>
     </div>
   );
 }

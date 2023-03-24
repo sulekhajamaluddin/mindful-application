@@ -33,6 +33,14 @@
   color: $color-grey;
 }
 
+.back {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  padding: $space-small;
+  background-color: white;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
