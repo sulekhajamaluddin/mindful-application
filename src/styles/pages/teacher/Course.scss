@@ -1,0 +1,22 @@
+.course {
+  min-height: 100vh;
+  gap: $space-medium;
+  background-color: $color-green;
+  color: white;
+
+  .button-holder {
+    max-width: 550px;
+  }
+
+  .content-btn,
+  .student-btn {
+    width: 50%;
+    height: 50px;
+    background-color: white;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .student-btn {
+    background-color: $color-light-green;
+  }
+}

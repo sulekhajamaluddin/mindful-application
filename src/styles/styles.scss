@@ -1,0 +1,36 @@
+// Base
+@import "./base/variables";
+@import "./base/layout";
+@import "./base/typography";
+@import "./base/wrappers.scss";
+
+//Components
+//Students
+@import "./components/students/CourseCard.scss";
+
+//Common
+@import "./components/common/Navbar.scss";
+@import "./components/common/Loader.scss";
+@import "./components/common/Modal.scss";
+@import "./components/common/Form.scss";
+@import "./components/common/CourseCard.scss";
+@import "./components/common/ContentFrame.scss";
+@import "./components/common/MentorItem.scss";
+@import "./components/common/Footer.scss";
+
+//Teacher
+@import "./components/teacher/ContentItem.scss";
+@import "./components/teacher/Contents.scss";
+@import "./components/teacher/StudentItem.scss";
+
+//Pages
+//Student
+@import "./pages/student/AllCourses.scss";
+
+//Teacher
+@import "./pages/teacher/Home.scss";
+@import "./pages/teacher/Course.scss";
+
+//Common
+@import "./pages/common/Login.scss";
+@import "./pages/common/LandingPage.scss";

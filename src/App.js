@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+//Node modules
 
-function App() {
+//Project Files
+import Modal from "./components/common/Modal";
+import Router from "./routes/Router";
+import SignedOutRoutes from "./routes/SignedOutRoutes";
+import { useUser } from "./state/UserProvider";
+
+//Styles
+import "./styles/styles.scss";
+
+export default function App() {
+  const { uid, user } = useUser();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!uid && <SignedOutRoutes />}
+      {uid && <Router user={user} />}
+      <Modal />
+    </>
   );
 }
-
-export default App;

@@ -1,0 +1,72 @@
+.primary[disabled],
+.primary-button[disabled] {
+  cursor: not-allowed;
+  background-color: $color-grey;
+}
+
+.button-holder {
+  width: 100%;
+  max-width: 960px;
+  padding: $space-small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-icon {
+  font-size: 26px;
+  color: $color-grey;
+}
+
+.delete-icon {
+  font-size: 25px;
+  color: $color-grey;
+}
+
+.camera-icon {
+  font-size: 28px;
+  color: $color-grey;
+}
+
+.upload-icon {
+  font-size: 26px;
+  color: $color-grey;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert-page {
+  height: 100vh;
+  padding: $space-big;
+  justify-content: center;
+  gap: $space-big;
+
+  h1 {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    font-size: 18px;
+  }
+}
+
+.page-layout {
+  border-top: 80px solid white;
+  padding: $space-big;
+}

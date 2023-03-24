@@ -1,0 +1,20 @@
+.common-pages {
+  height: 100vh;
+  gap: $space-x-big;
+  width: 550px;
+  margin: auto;
+
+  span,
+  a,
+  label {
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .link {
+    gap: $space-small;
+  }
+}

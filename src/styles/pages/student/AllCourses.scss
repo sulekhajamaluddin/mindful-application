@@ -1,0 +1,31 @@
+.all-courses {
+  min-height: 100vh;
+  background: $color-green;
+  color: white;
+  gap: $space-big;
+
+  p {
+    font-size: 25px;
+  }
+
+  .enroll {
+    height: 40px;
+    width: 100%;
+    background-color: $color-light-green;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $space-big;
+
+    @media (min-width: 750px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 960px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.form {
+  width: 100%;
+  max-width: 550px;
+  gap: $space-medium;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: rgba(128, 128, 128, 0.1);
+    padding: 0 $space-medium;
+  }
+
+  input[type="submit"] {
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-green;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+}

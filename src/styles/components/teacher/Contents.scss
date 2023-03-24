@@ -1,0 +1,12 @@
+.contents {
+  width: 100%;
+  max-width: 550px;
+  gap: $space-medium;
+  padding: $space-small;
+
+  .add-btn {
+    text-decoration: underline;
+    color: white;
+    margin-left: auto;
+  }
+}

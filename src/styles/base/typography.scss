@@ -1,0 +1,48 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Lora:wght@400;700&family=Niconne&family=Poller+One&display=swap");
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+h1 {
+  font-size: 25px;
+
+  @media (min-width: 1280px) {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: $paragraph-mobile;
+  line-height: 130%;
+
+  @media (min-width: 1280px) {
+    font-size: $paragraph-desktop;
+    line-height: 140%;
+  }
+}
+
+.button,
+button,
+span,
+a,
+label {
+  font-size: $paragraph-mobile;
+  font-weight: bold;
+
+  @media (min-width: 12800px) {
+    font-size: $paragraph-desktop;
+  }
+}

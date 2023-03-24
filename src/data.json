@@ -1,0 +1,22 @@
+{
+  "mentors": [
+    {
+      "id": 1,
+      "name": "Katheryn",
+      "picture": "katheryn.jpg",
+      "description": "Your yoga mentor with 10+ years experience."
+    },
+    {
+      "id": 2,
+      "name": "Jerome",
+      "picture": "jerome.jpg",
+      "description": "Jerome is an expert when it comes to time management"
+    },
+    {
+      "id": 3,
+      "name": "Christina",
+      "picture": "christina.jpg",
+      "description": "No one can teach you how to master habits like Christina."
+    }
+  ]
+}

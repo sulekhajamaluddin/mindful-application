@@ -1,0 +1,28 @@
+#modal .background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(99, 99, 99, 0.7);
+  z-index: 1000;
+}
+
+#modal .window {
+  position: fixed;
+  width: 90%;
+  max-width: 550px;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: $space-medium;
+  z-index: 1000;
+
+  .primary[disabled],
+  .primary-button[disabled] {
+    cursor: not-allowed;
+    background-color: $color-grey;
+  }
+}

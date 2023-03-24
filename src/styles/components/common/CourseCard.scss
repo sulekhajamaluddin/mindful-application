@@ -1,0 +1,22 @@
+.card {
+  width: 220px;
+  height: 300px;
+  border-radius: 10px;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+
+  h2 {
+    text-align: center;
+  }
+
+  .thumbnail-holder {
+    width: 100%;
+  }
+  .thumbnail {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+}
