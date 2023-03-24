@@ -8,6 +8,7 @@ import Loader from "../../components/common/Loader";
 import Error from "../../pages/common/Error";
 import CourseCard from "../../components/teacher/CourseCard";
 import AddCourse from "../../components/teacher/forms/AddCourse";
+import EmptyList from "../../components/common/EmptyList";
 
 export default function Home() {
   const { uid, user, courses, coursesDispatch } = useUser();
@@ -49,7 +50,9 @@ export default function Home() {
       <button className="course-btn" onClick={() => openModal(<AddCourse />)}>
         Add course
       </button>
-      <div className="course-list">{courseList}</div>
+      <div className="course-list">
+        {courses.length === 0 ? <EmptyList /> : courseList}
+      </div>
     </div>
   );
 }

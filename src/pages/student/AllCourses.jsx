@@ -6,6 +6,7 @@ import { useUser } from "../../state/UserProvider";
 import Loader from "../../components/common/Loader";
 import Error from "../../pages/common/Error";
 import CourseCard from "../../components/student/CourseCard";
+import EmptyList from "../../components/common/EmptyList";
 
 export default function Home() {
   const { courses, coursesDispatch } = useUser();
@@ -37,10 +38,13 @@ export default function Home() {
   const courseList = courses.map((course) => (
     <CourseCard key={course.id} course={course} />
   ));
+
   return (
     <div className="all-courses page-layout flex-column-center">
       <h1>All available courses</h1>
-      <div className="course-list">{courseList}</div>
+      <div className="course-list">
+        {courses.length === 0 ? <EmptyList /> : courseList}
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import ContentItem from "../../components/teacher/ContentItem";
 import AddContent from "./forms/AddContent";
 import { useModal } from "../../state/ModalProvider";
+import EmptyList from "../common/EmptyList";
 
 export default function Contents({ contents, id }) {
   const { openModal } = useModal();
@@ -16,7 +17,7 @@ export default function Contents({ contents, id }) {
       >
         Add new content
       </button>
-      {contentsList}
+      {contents.length === 0 ? <EmptyList /> : contentsList}
     </div>
   );
 }

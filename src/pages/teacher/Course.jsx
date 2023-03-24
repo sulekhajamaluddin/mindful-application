@@ -6,6 +6,7 @@ import Error from "../common/Error";
 import StudentItem from "../../components/teacher/StudentItem";
 import Contents from "../../components/teacher/Contents";
 import { useUser } from "../../state/UserProvider";
+import EmptyList from "../../components/common/EmptyList";
 
 export default function Course() {
   const [status, setStatus] = useState(0);
@@ -41,9 +42,14 @@ export default function Course() {
   if (status === 0) return <Loader />;
   if (status === 2) return <Error />;
 
-  const studentsList = students.map((student) => (
-    <StudentItem key={student.id} student={student} />
-  ));
+  const studentsList =
+    students.length === 0 ? (
+      <EmptyList />
+    ) : (
+      students.map((student) => (
+        <StudentItem key={student.id} student={student} />
+      ))
+    );
 
   return (
     <div className="course page-layout flex-column-center">
