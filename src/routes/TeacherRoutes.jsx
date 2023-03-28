@@ -8,6 +8,7 @@ import Navbar from "../components/teacher/Navbar";
 import Course from "../pages/teacher/Course";
 import Footer from "../components/common/Footer";
 
+// good
 export default function TeacherRoutes() {
   return (
     <>

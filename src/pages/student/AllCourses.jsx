@@ -9,6 +9,7 @@ import Error from "../../pages/common/Error";
 import CourseCard from "../../components/student/CourseCard";
 import EmptyList from "../../components/common/EmptyList";
 
+// good
 export default function Home() {
   const navigate = useNavigate();
   const { courses, coursesDispatch } = useUser();

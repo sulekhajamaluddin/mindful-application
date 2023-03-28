@@ -10,6 +10,7 @@ import NotFound from "../pages/common/NotFound";
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
 
+// good
 export default function SignedOutRoutes() {
   return (
     <>

@@ -8,6 +8,9 @@ import NotFound from "../pages/common/NotFound";
 import Home from "../pages/student/Home";
 import Course from "../pages/student/Course";
 import Footer from "../components/common/Footer";
+
+// formatting -1
+// put an space between the import and export
 export default function StudentRoutes() {
   return (
     <>

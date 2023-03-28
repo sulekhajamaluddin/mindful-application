@@ -40,6 +40,8 @@ export default function Course() {
     setStatus(2);
   }
 
+  // Formating -1
+  // This ones should be closer to your return
   if (status === 0) return <Loader />;
   if (status === 2) return <Error />;
 
