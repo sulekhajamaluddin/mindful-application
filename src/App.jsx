@@ -1,8 +1,6 @@
-//Node modules
-
 //Project Files
 import Modal from "./components/common/Modal";
-import Router from "./routes/Router";
+import SignedInRoutes from "./routes/Router";
 import SignedOutRoutes from "./routes/SignedOutRoutes";
 import { useUser } from "./state/UserProvider";
 
@@ -14,7 +12,7 @@ export default function App() {
   return (
     <>
       {!uid && <SignedOutRoutes />}
-      {uid && <Router user={user} />}
+      {uid && <SignedInRoutes user={user} />}
       <Modal />
     </>
   );

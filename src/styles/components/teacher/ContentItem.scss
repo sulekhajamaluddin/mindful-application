@@ -23,4 +23,11 @@
   a {
     text-decoration: underline;
   }
+
+  .link-file,
+  .modal-file {
+    display: flex;
+    align-items: center;
+    gap: $space-medium;
+  }
 }

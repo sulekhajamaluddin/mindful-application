@@ -46,10 +46,10 @@ export default function Home() {
       <h1>All available courses</h1>
       <div className="course-list">
         {courses.length === 0 ? <EmptyList /> : courseList}
-        <button className="back" onClick={() => navigate(-1)}>
-          Go back
-        </button>
       </div>
+      <button className="back" onClick={() => navigate(-1)}>
+        Go back
+      </button>
     </div>
   );
 }

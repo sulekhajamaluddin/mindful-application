@@ -1,6 +1,6 @@
 //Project Files
-import hero from "../../assets/hero.png";
-import benefits from "../../assets/benefits.png";
+import hero from "../../assets/mindful.jpg";
+import benefits from "../../assets/benefits_all.png";
 import MentorItem from "../../components/common/MentorItem";
 import data from "../../data.json";
 
@@ -11,9 +11,9 @@ export default function LandingPage() {
 
   return (
     <main className="landing-page">
-      <img className="main-img" src={hero} alt="A girl holding a rainbow" />
-      <div className="top-white-background"></div>
-      <div className="background"></div>
+      <div className="background flex-center">
+        <img className="main-img" src={hero} alt="A girl holding a rainbow" />
+      </div>
       <section className="mindful flex-column-center">
         <h1 className="title flex-column-center">Why mindful??</h1>
         <p>

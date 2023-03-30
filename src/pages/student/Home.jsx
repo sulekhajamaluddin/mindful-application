@@ -37,7 +37,7 @@ export default function Home() {
   if (status === 2) return <Error />;
 
   const courseList = courses.map((course) => (
-    <CourseCard key={course.id} course={course} />
+    <CourseCard key={course.id} course={course} path={`/course/${course.id}`} />
   ));
 
   return (

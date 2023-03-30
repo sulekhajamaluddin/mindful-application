@@ -5,7 +5,7 @@ import placeholder from "../../assets/thumbnail_placeholder.jpeg";
 import { useUser } from "../../state/UserProvider";
 import { createDocumentManualID } from "../../scripts/firestore/createDocumentManualID";
 
-export default function CourseCard({ course }) {
+export default function CourseCard({ course, path }) {
   const { uid, user } = useUser();
   const navigate = useNavigate();
   const COLLECTION_NAME = `courses/${course.id}/students`;
@@ -21,7 +21,7 @@ export default function CourseCard({ course }) {
 
   return (
     <div className="student-course flex-column-center">
-      <Link className="thumbnail-holder" to={`/course/${course.id}`}>
+      <Link className="thumbnail-holder" to={path}>
         <img className="thumbnail" src={imageSource} alt="thumbnail" />
         <h2>{course.name}</h2>
       </Link>

@@ -1,12 +1,12 @@
 //Node Modules
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //Project Files
-import placeholder from "../../assets/placeholder.png";
+import placeholder from "../../assets/placeholder_upload.png";
 import UploadFile from "./forms/UploadFile";
 import AddLink from "./forms/AddLink";
 import { useModal } from "../../state/ModalProvider";
 
-export default function ContentFrame({ state }) {
+export default function ContentFrame({ state, action }) {
   const [content, id] = state;
   const { openModal } = useModal();
   const imageSource = content.url === "" ? placeholder : content.url;
@@ -31,14 +31,19 @@ export default function ContentFrame({ state }) {
 
   return (
     <div className="content-frame flex-column-center">
-      <div className="button-holder">
-        <button onClick={() => openModal(uploadForm)}>
-          <FontAwesomeIcon className="upload-icon" icon={uploadIcon} />
-        </button>
-        <button onClick={() => openModal(addLinkForm)}>
-          <FontAwesomeIcon className="upload-icon" icon={"fa-solid fa-link"} />
-        </button>
-      </div>
+      {action === "edit" && (
+        <div className="button-holder">
+          <button onClick={() => openModal(uploadForm)}>
+            <FontAwesomeIcon className="upload-icon" icon={uploadIcon} />
+          </button>
+          <button onClick={() => openModal(addLinkForm)}>
+            <FontAwesomeIcon
+              className="upload-icon"
+              icon={"fa-solid fa-link"}
+            />
+          </button>
+        </div>
+      )}
       {displayUnit}
     </div>
   );

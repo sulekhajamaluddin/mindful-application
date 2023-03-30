@@ -1,6 +1,6 @@
 //Node Modules
 import { useParams } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 //Project Files
 import DeleteIcon from "../teacher/DeleteIcon";
 import EditIcon from "../teacher/EditIcon";
@@ -25,33 +25,38 @@ export default function ContentItem({ content }) {
     contentsDispatch({ type: "delete", payload: item.id });
   }
 
-  function modalView() {
-    openModal(<ContentFrame state={state} />);
+  function modalView(action) {
+    openModal(<ContentFrame state={state} action={action} />);
   }
-
-  const openLinkButton = (
-    <a href={content.url} target="_blank" rel="noreferrer">
-      View link
-    </a>
-  );
-
-  const openModalButton = (
-    <button onClick={() => modalView()}>View {content.type}</button>
-  );
-
-  const addLinkForm = <AddLink item={content} id={id} />;
 
   const uploadLinkIcon = (
     <button onClick={() => openModal(addLinkForm)}>
-      <FontAwesomeIcon className="upload-icon" icon={"fa-solid fa-link"} />
+      <span>Edit</span>
     </button>
   );
+
+  const handlelink = (
+    <div className="link-file">
+      <a href={content.url} target="_blank" rel="noreferrer">
+        View
+      </a>
+      {uploadLinkIcon}
+    </div>
+  );
+
+  const handleModal = (
+    <div className="modal-file">
+      <button onClick={() => modalView("view")}>View</button>
+      <button onClick={() => modalView("edit")}>Edit</button>
+    </div>
+  );
+  const addLinkForm = <AddLink item={content} id={id} />;
 
   return (
     <div className="content-item flex-column-center">
       <div className="details flex-center">
         <span>{content.name}</span>
-        {content.type === "link" ? openLinkButton : openModalButton}
+        {content.type === "link" ? handlelink : handleModal}
       </div>
       <div className="button-holder">
         <EditIcon
@@ -59,7 +64,6 @@ export default function ContentItem({ content }) {
           collectionName={COLLECTION_NAME}
           type={"content"}
         />
-        {content.type === "link" && uploadLinkIcon}
         <DeleteIcon onDelete={() => onDelete(content)} />
       </div>
     </div>
