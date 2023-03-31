@@ -22,7 +22,7 @@ export default function StudentItem({ student }) {
 
   return (
     <div className="student-item flex-center">
-      <span>{student.name}</span>
+      <span>{student.email}</span>
       <DeleteIcon onDelete={() => deleteStudent(student)} />
     </div>
   );
