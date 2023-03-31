@@ -21,7 +21,6 @@ export function UserProvider({ children }) {
     UserReducer,
     getLocalStorage("user") || {}
   );
-  console.log(user);
   const [uid, setUid] = useState(getLocalStorage("uid") || null);
 
   const [courses, coursesDispatch] = useReducer(CourseReducer, []);
