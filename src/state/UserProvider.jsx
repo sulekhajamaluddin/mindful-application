@@ -17,11 +17,12 @@ const Context = createContext(null);
 
 export function UserProvider({ children }) {
   //State
-  const [uid, setUid] = useState(getLocalStorage("uid") || null);
   const [user, dispatch] = useReducer(
     UserReducer,
     getLocalStorage("user") || null
   );
+  const [uid, setUid] = useState(getLocalStorage("uid") || null);
+
   const [courses, coursesDispatch] = useReducer(CourseReducer, []);
   const [contents, contentsDispatch] = useReducer(ContentsReducer, []);
   const [students, studentsDispatch] = useReducer(StudentsReducer, []);
