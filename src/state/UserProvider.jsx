@@ -19,8 +19,9 @@ export function UserProvider({ children }) {
   //State
   const [user, dispatch] = useReducer(
     UserReducer,
-    getLocalStorage("user") || null
+    getLocalStorage("user") || {}
   );
+  console.log(user);
   const [uid, setUid] = useState(getLocalStorage("uid") || null);
 
   const [courses, coursesDispatch] = useReducer(CourseReducer, []);
